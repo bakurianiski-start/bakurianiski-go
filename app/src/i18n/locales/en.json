@@ -1,0 +1,236 @@
+{
+  "nav": {
+    "instructors": "Instructors",
+    "whyUs": "Why Us",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "bookLesson": "Book a Lesson"
+  },
+  "hero": {
+    "badge": "Georgia's Premier Ski Destination",
+    "title": "Master the Slopes of ",
+    "titleHighlight": "Bakuriani",
+    "subtitle": "Book professional ski and snowboard instructors for an unforgettable mountain experience. From beginners to advanced riders, we have the perfect instructor for you.",
+    "ctaPrimary": "Find Your Instructor",
+    "ctaSecondary": "Learn More",
+    "scrollText": "Scroll to explore",
+    "stats": {
+      "instructors": "Expert Instructors",
+      "lessons": "Lessons Taught",
+      "clients": "Happy Clients"
+    }
+  },
+  "instructors": {
+    "badge": "Expert Instructors",
+    "title": "Find Your Perfect ",
+    "titleHighlight": "Instructor",
+    "subtitle": "Browse our team of certified professional instructors and book your lesson today. From beginners to advanced riders, we have the right instructor for you.",
+    "filters": "Filters",
+    "filtersActive": "Active",
+    "sortBy": "Sort by",
+    "resetFilters": "Reset Filters",
+    "showing": "Showing",
+    "instructor": "instructor",
+    "instructors": "instructors",
+    "noResults": "No instructors found",
+    "noResultsText": "Try adjusting your filters to see more results",
+    "yearsExperience": "years experience",
+    "perHour": "/hour",
+    "perSession": "/session",
+    "bookNow": "Book Now",
+    "lessonType": "Lesson Type",
+    "skillLevel": "Skill Level",
+    "language": "Language",
+    "maxPrice": "Max Price",
+    "allTypes": "All Types",
+    "allLevels": "All Levels",
+    "allLanguages": "All Languages",
+    "sortOptions": {
+      "priceLow": "Price: Low to High",
+      "priceHigh": "Price: High to Low",
+      "rating": "Highest Rated",
+      "experience": "Most Experienced"
+    },
+    "levels": {
+      "beginner": "Beginner Friendly",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "lessonTypes": {
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "kids": "Kids",
+      "group": "Group",
+      "private": "Private"
+    }
+  },
+  "booking": {
+    "title": "Book a Lesson",
+    "step": "Step",
+    "steps": {
+      "lesson": "Lesson",
+      "datetime": "Date & Time",
+      "details": "Your Details"
+    },
+    "selectLessonType": "Select Lesson Type",
+    "selectDate": "Select Date",
+    "selectTime": "Select Time",
+    "duration": "2 hours",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "notes": "Additional Notes (Optional)",
+    "notesPlaceholder": "Any special requests or information we should know...",
+    "bookingSummary": "Booking Summary",
+    "instructor": "Instructor",
+    "lessonType": "Lesson Type",
+    "date": "Date",
+    "time": "Time",
+    "durationLabel": "Duration",
+    "total": "Total",
+    "next": "Next",
+    "back": "Back",
+    "cancel": "Cancel",
+    "confirmBooking": "Confirm Booking",
+    "processing": "Processing...",
+    "success": {
+      "title": "Booking Request Sent!",
+      "message": "Thank you for your booking request. We will contact you shortly to confirm it.",
+      "detailsTitle": "Your Booking Details",
+      "contactText": "We will contact you shortly to confirm all details.",
+      "close": "Close"
+    },
+    "errors": {
+      "lessonType": "Please select a lesson type",
+      "date": "Please select a date",
+      "time": "Please select a time",
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "phone": "Please enter a valid phone number",
+      "email": "Please enter a valid email",
+      "submit": "Could not send your booking. Please try again later."
+    }
+  },
+  "whyUs": {
+    "badge": "Why Choose Us",
+    "title": "The ",
+    "titleHighlight": "BakurianiSki",
+    "titleEnd": " Difference",
+    "subtitle": "We are not just another ski school. We are a community of passionate instructors dedicated to making your mountain experience unforgettable.",
+    "cta": "Find Your Instructor",
+    "features": {
+      "certified": {
+        "title": "Certified Instructors",
+        "description": "All our instructors are ISIA certified with years of experience teaching skiers of all levels. Learn from the best in Bakuriani."
+      },
+      "safety": {
+        "title": "Safety First",
+        "description": "Your safety is our priority. All instructors are trained in first aid and avalanche safety. We provide comprehensive insurance coverage."
+      },
+      "flexible": {
+        "title": "Flexible Scheduling",
+        "description": "Book lessons at your convenience. Easy rescheduling up to 24 hours in advance."
+      },
+      "personalized": {
+        "title": "Personalized Approach",
+        "description": "Every skier is unique. Our instructors tailor their teaching methods to your learning style, goals, and pace for maximum progress."
+      },
+      "local": {
+        "title": "Local Expertise",
+        "description": "Our instructors know every slope, powder stash, and hidden gem in Bakuriani. Get insider tips on the best runs for your level."
+      },
+      "guarantee": {
+        "title": "Satisfaction Guaranteed",
+        "description": "Not satisfied with your lesson? We will make it right with a free follow-up session. Your happiness is our success metric."
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our ",
+    "titleHighlight": "Clients Say",
+    "subtitle": "Do not just take our word for it. Hear from skiers who have transformed their skills with our instructors.",
+    "stats": {
+      "rating": "Average Rating",
+      "reviews": "Reviews",
+      "recommend": "Would Recommend"
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Frequently Asked ",
+    "titleHighlight": "Questions",
+    "subtitle": "Got questions? We have got answers. If you can not find what you are looking for, feel free to contact us.",
+    "stillHaveQuestions": "Still have questions?",
+    "contactText": "Our team is here to help. Reach out and we will get back to you within 24 hours.",
+    "contactUs": "Contact Us",
+    "items": {
+      "bring": {
+        "question": "What should I bring to my ski lesson?",
+        "answer": "Please bring your ski equipment (skis, boots, poles), valid ski pass, warm clothing, gloves, goggles, and sunscreen. If you need equipment rental, we can recommend trusted rental shops in Bakuriani."
+      },
+      "duration": {
+        "question": "How long are the lessons?",
+        "answer": "All our standard lessons are 2 hours long. This is the optimal duration for effective learning while maintaining energy and focus throughout the session."
+      },
+      "kids": {
+        "question": "Can I book a lesson for my child?",
+        "answer": "Absolutely! We have instructors specialized in teaching children. Kids lessons are available for ages 4 and up. We focus on safety, fun, and building confidence on the slopes."
+      },
+      "cancel": {
+        "question": "What if I need to cancel or reschedule?",
+        "answer": "We understand plans can change. You can reschedule or cancel your booking up to 24 hours before the lesson for a full refund. Cancellations within 24 hours are subject to a 50% fee."
+      },
+      "group": {
+        "question": "Do you offer group discounts?",
+        "answer": "Yes! Group lessons are a great way to learn with friends or family. We offer discounts for groups of 3 or more. Contact us for custom group packages."
+      },
+      "languages": {
+        "question": "What languages do the instructors speak?",
+        "answer": "Our instructors speak multiple languages including English, Georgian, Russian, German, French, and Spanish. You can filter instructors by language when booking."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Get in ",
+    "titleHighlight": "Touch",
+    "subtitle": "Have questions about booking or need help finding the right instructor? We are here to help you plan your perfect ski experience.",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email Address",
+      "emailPlaceholder": "john@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "How can we help?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": {
+        "title": "Message Sent!",
+        "text": "Thank you for reaching out. We will get back to you within 24 hours."
+      }
+    },
+    "info": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    }
+  },
+  "footer": {
+    "description": "Georgia's premier ski instructor booking platform. Connecting you with certified professionals for an unforgettable mountain experience.",
+    "company": "Company",
+    "support": "Support",
+    "legal": "Legal",
+    "copyright": "All rights reserved."
+  },
+  "language": {
+    "en": "English",
+    "ka": "ქართული",
+    "ru": "Русский"
+  }
+}
