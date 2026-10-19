@@ -13,3 +13,13 @@
   from = "/api/contact"
   to = "/.netlify/functions/contact"
   status = 200
+
+[[redirects]]
+  from = "/terms-of-service"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/index.html"
+  status = 200

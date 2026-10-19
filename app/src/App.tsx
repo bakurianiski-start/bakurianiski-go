@@ -7,13 +7,24 @@ import { Instructors } from './sections/Instructors';
 import { WhyUs } from './sections/WhyUs';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
+import { LegalPage } from './sections/LegalPage';
 
 function App() {
   const { i18n } = useTranslation();
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  const legalPage = path === '/terms-of-service'
+    ? 'terms'
+    : path === '/privacy-policy'
+      ? 'privacy'
+      : null;
 
   useEffect(() => {
     document.documentElement.lang = i18n.language;
   }, [i18n.language]);
+
+  if (legalPage) {
+    return <LegalPage page={legalPage} />;
+  }
 
   return (
     <div className="min-h-screen bg-white">

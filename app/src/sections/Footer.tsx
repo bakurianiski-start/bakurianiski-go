@@ -14,8 +14,8 @@ export function Footer() {
       { label: t('nav.contact'), href: '#contact' },
     ],
     legal: [
-      { label: 'Terms of Service', href: '#' },
-      { label: 'Privacy Policy', href: '#' },
+      { label: t('footer.terms'), href: '/terms-of-service' },
+      { label: t('footer.privacy'), href: '/privacy-policy' },
     ],
   };
 
