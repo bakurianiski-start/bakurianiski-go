@@ -3,6 +3,14 @@ import { useTranslation } from 'react-i18next';
 import { ChevronDown, Snowflake, Calendar, Users, Award } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+const snowflakes = Array.from({ length: 20 }, (_, index) => ({
+  x: (index * 67) % 1000,
+  drift: (index % 5 - 2) * 20,
+  duration: 10 + (index % 6),
+  delay: index % 10,
+  size: 8 + (index % 5) * 2,
+}));
+
 export function Hero() {
   const { t } = useTranslation();
 
@@ -14,7 +22,7 @@ export function Hero() {
   };
 
   const stats = [
-    { icon: Users, value: '15+', label: t('hero.stats.instructors') },
+    { icon: Users, value: '', label: t('hero.stats.instructors') },
     { icon: Calendar, value: '10K+', label: t('hero.stats.lessons') },
     { icon: Award, value: '98%', label: t('hero.stats.clients') },
   ];
@@ -35,30 +43,30 @@ export function Hero() {
 
       {/* Animated Snowflakes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {snowflakes.map((snowflake, i) => (
           <motion.div
             key={i}
             className="absolute"
             initial={{
-              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
+              x: snowflake.x,
               y: -20,
             }}
             animate={{
               y: typeof window !== 'undefined' ? window.innerHeight + 20 : 1000,
-              x: `+=${Math.random() * 100 - 50}`,
+              x: `+=${snowflake.drift}`,
             }}
             transition={{
-              duration: Math.random() * 10 + 10,
+              duration: snowflake.duration,
               repeat: Infinity,
               ease: 'linear',
-              delay: Math.random() * 10,
+              delay: snowflake.delay,
             }}
           >
             <Snowflake
               className="text-white/30"
               style={{
-                width: Math.random() * 12 + 8,
-                height: Math.random() * 12 + 8,
+                width: snowflake.size,
+                height: snowflake.size,
               }}
             />
           </motion.div>
@@ -130,7 +138,7 @@ export function Hero() {
                 const element = document.querySelector('#why-us');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="w-full sm:w-auto px-8 py-6 text-lg font-semibold border-2 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm transition-all duration-300 rounded-xl"
+              className="w-full sm:w-auto px-8 py-6 text-lg font-semibold border-2 border-white/60 !bg-slate-900/40 !text-white hover:!bg-white/15 hover:!text-white backdrop-blur-sm transition-all duration-300 rounded-xl"
             >
               {t('hero.ctaSecondary')}
             </Button>
@@ -154,9 +162,11 @@ export function Hero() {
                 <div className="flex justify-center mb-2">
                   <stat.icon className="w-5 h-5 text-sky-300" />
                 </div>
-                <div className="text-2xl sm:text-3xl font-bold text-white">
-                  {stat.value}
-                </div>
+                {stat.value && (
+                  <div className="text-2xl sm:text-3xl font-bold text-white">
+                    {stat.value}
+                  </div>
+                )}
                 <div className="text-xs sm:text-sm text-white/60">{stat.label}</div>
               </motion.div>
             ))}

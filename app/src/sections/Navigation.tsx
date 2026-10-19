@@ -30,8 +30,6 @@ export function Navigation() {
   const navLinks = [
     { href: '#instructors', label: t('nav.instructors') },
     { href: '#why-us', label: t('nav.whyUs') },
-    { href: '#testimonials', label: t('nav.testimonials') },
-    { href: '#faq', label: t('nav.faq') },
     { href: '#contact', label: t('nav.contact') },
   ];
 

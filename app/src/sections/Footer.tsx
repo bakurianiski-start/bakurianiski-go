@@ -11,7 +11,6 @@ export function Footer() {
       { label: t('nav.whyUs'), href: '#why-us' },
     ],
     support: [
-      { label: t('nav.faq'), href: '#faq' },
       { label: t('nav.contact'), href: '#contact' },
     ],
     legal: [
@@ -59,9 +58,9 @@ export function Footer() {
             </p>
 
             <div className="space-y-3">
-              <a href="mailto:info@bakurianiski.com" className="flex items-center gap-3 text-slate-400 hover:text-sky-400 transition-colors">
+              <a href="mailto:bakurianiski@gmail.com" className="flex items-center gap-3 text-slate-400 hover:text-sky-400 transition-colors">
                 <Mail className="w-5 h-5" />
-                <span>info@bakurianiski.com</span>
+                <span>bakurianiski@gmail.com</span>
               </a>
               <a href="tel:+995555123456" className="flex items-center gap-3 text-slate-400 hover:text-sky-400 transition-colors">
                 <Phone className="w-5 h-5" />

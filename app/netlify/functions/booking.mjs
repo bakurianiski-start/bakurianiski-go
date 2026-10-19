@@ -2,15 +2,25 @@ const allowedLessonTypes = new Set([
   'beginner',
   'intermediate',
   'advanced',
-  'kids',
-  'group',
-  'private',
 ]);
 
 const text = (value, maxLength) =>
   typeof value === 'string' ? value.trim().slice(0, maxLength) : '';
 
 const isEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+const isPhone = (value) => {
+  if (!/^\+?[\d\s().-]+$/.test(value)) return false;
+  const digits = value.replace(/\D/g, '');
+  return digits.length >= 7 && digits.length <= 15;
+};
+const escapeHtml = (value) =>
+  value.replace(/[&<>"']/g, (character) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  })[character]);
 
 export const handler = async (event) => {
   if (event.httpMethod !== 'POST') {
@@ -58,7 +68,7 @@ export const handler = async (event) => {
     !firstName ||
     !lastName ||
     !isEmail(email) ||
-    !phone ||
+    !isPhone(phone) ||
     !instructorName ||
     !allowedLessonTypes.has(lessonType) ||
     !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
@@ -82,10 +92,39 @@ export const handler = async (event) => {
     `Lesson type: ${lessonType}`,
     `Date: ${date}`,
     `Time: ${time}`,
-    `Duration: 2 hours`,
     `Total: ${total} USD`,
     `Notes: ${notes || '-'}`,
   ].join('\n');
+  const fields = [
+    ['Name', `${firstName} ${lastName}`],
+    ['Email', email],
+    ['Phone', phone],
+    ['Instructor', instructorName],
+    ['Lesson type', lessonType[0].toUpperCase() + lessonType.slice(1)],
+    ['Date', date],
+    ['Time', time],
+    ['Total', `${total} USD`],
+    ['Notes', notes || '-'],
+  ];
+  const rows = fields.map(([label, value]) => `
+    <tr>
+      <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;color:#64748b;font-size:14px;width:34%;vertical-align:top;">${escapeHtml(label)}</td>
+      <td style="padding:12px 16px;border-bottom:1px solid #e2e8f0;color:#0f172a;font-size:14px;font-weight:600;vertical-align:top;">${escapeHtml(value)}</td>
+    </tr>`).join('');
+  const html = `
+    <div style="margin:0;padding:32px 16px;background:#f1f5f9;font-family:Arial,Helvetica,sans-serif;color:#0f172a;">
+      <div style="max-width:620px;margin:0 auto;background:#ffffff;border-radius:18px;overflow:hidden;border:1px solid #e2e8f0;">
+        <div style="padding:28px 32px;background:linear-gradient(135deg,#0284c7,#2563eb);color:#ffffff;">
+          <div style="font-size:13px;letter-spacing:1.5px;text-transform:uppercase;opacity:.85;">BakurianiSki</div>
+          <h1 style="margin:10px 0 0;font-size:24px;line-height:1.3;">New booking request</h1>
+          <p style="margin:8px 0 0;font-size:14px;opacity:.9;">A new ski lesson request was submitted.</p>
+        </div>
+        <div style="padding:24px 20px 30px;">
+          <table role="presentation" style="width:100%;border-collapse:collapse;">${rows}</table>
+          <p style="margin:22px 0 0;color:#64748b;font-size:13px;">Reply directly to this email to contact the customer.</p>
+        </div>
+      </div>
+    </div>`;
 
   try {
     const response = await fetch('https://api.resend.com/emails', {
@@ -100,6 +139,7 @@ export const handler = async (event) => {
         reply_to: email,
         subject: `New booking: ${firstName} ${lastName}`,
         text: message,
+        html,
       }),
     });
 

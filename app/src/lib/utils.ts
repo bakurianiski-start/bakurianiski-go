@@ -50,6 +50,9 @@ export function validateEmail(email: string): boolean {
 }
 
 export function validatePhone(phone: string): boolean {
-  const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
-  return phoneRegex.test(phone.replace(/\s/g, ''));
+  const normalizedPhone = phone.trim();
+  if (!/^\+?[\d\s().-]+$/.test(normalizedPhone)) return false;
+
+  const digits = normalizedPhone.replace(/\D/g, '');
+  return digits.length >= 7 && digits.length <= 15;
 }

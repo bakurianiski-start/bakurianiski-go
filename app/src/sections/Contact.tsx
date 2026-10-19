@@ -53,7 +53,7 @@ export function Contact() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: t('contact.info.email'), value: 'info@bakurianiski.com', href: 'mailto:info@bakurianiski.com' },
+    { icon: Mail, label: t('contact.info.email'), value: 'bakurianiski@gmail.com', href: 'mailto:bakurianiski@gmail.com' },
     { icon: Phone, label: t('contact.info.phone'), value: '+995 555 123 456', href: 'tel:+995555123456' },
     { icon: MapPin, label: t('contact.info.location'), value: 'Bakuriani, Georgia', href: '#' },
   ];

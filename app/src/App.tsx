@@ -5,8 +5,6 @@ import { Navigation } from './sections/Navigation';
 import { Hero } from './sections/Hero';
 import { Instructors } from './sections/Instructors';
 import { WhyUs } from './sections/WhyUs';
-import { Testimonials } from './sections/Testimonials';
-import { FAQ } from './sections/FAQ';
 import { Contact } from './sections/Contact';
 import { Footer } from './sections/Footer';
 
@@ -24,8 +22,6 @@ function App() {
         <Hero />
         <Instructors />
         <WhyUs />
-        <Testimonials />
-        <FAQ />
         <Contact />
       </main>
       <Footer />

@@ -2,8 +2,6 @@
   "nav": {
     "instructors": "Instructors",
     "whyUs": "Why Us",
-    "testimonials": "Testimonials",
-    "faq": "FAQ",
     "contact": "Contact",
     "bookLesson": "Book a Lesson"
   },
@@ -11,7 +9,7 @@
     "badge": "Georgia's Premier Ski Destination",
     "title": "Master the Slopes of ",
     "titleHighlight": "Bakuriani",
-    "subtitle": "Book professional ski and snowboard instructors for an unforgettable mountain experience. From beginners to advanced riders, we have the perfect instructor for you.",
+    "subtitle": "Book a professional ski instructor in Bakuriani for an unforgettable mountain experience, whatever your skill level.",
     "ctaPrimary": "Find Your Instructor",
     "ctaSecondary": "Learn More",
     "scrollText": "Scroll to explore",
@@ -25,7 +23,7 @@
     "badge": "Expert Instructors",
     "title": "Find Your Perfect ",
     "titleHighlight": "Instructor",
-    "subtitle": "Browse our team of certified professional instructors and book your lesson today. From beginners to advanced riders, we have the right instructor for you.",
+    "subtitle": "Meet Giorgi Diakonashvili, your professional ski instructor in Bakuriani, and book a lesson today.",
     "filters": "Filters",
     "filtersActive": "Active",
     "sortBy": "Sort by",
@@ -35,8 +33,6 @@
     "instructors": "instructors",
     "noResults": "No instructors found",
     "noResultsText": "Try adjusting your filters to see more results",
-    "yearsExperience": "years experience",
-    "perHour": "/hour",
     "perSession": "/session",
     "bookNow": "Book Now",
     "lessonType": "Lesson Type",
@@ -49,8 +45,7 @@
     "sortOptions": {
       "priceLow": "Price: Low to High",
       "priceHigh": "Price: High to Low",
-      "rating": "Highest Rated",
-      "experience": "Most Experienced"
+      "rating": "Highest Rated"
     },
     "levels": {
       "beginner": "Beginner Friendly",
@@ -60,10 +55,7 @@
     "lessonTypes": {
       "beginner": "Beginner",
       "intermediate": "Intermediate",
-      "advanced": "Advanced",
-      "kids": "Kids",
-      "group": "Group",
-      "private": "Private"
+      "advanced": "Advanced"
     }
   },
   "booking": {
@@ -77,7 +69,6 @@
     "selectLessonType": "Select Lesson Type",
     "selectDate": "Select Date",
     "selectTime": "Select Time",
-    "duration": "2 hours",
     "firstName": "First Name",
     "lastName": "Last Name",
     "phone": "Phone Number",
@@ -89,7 +80,6 @@
     "lessonType": "Lesson Type",
     "date": "Date",
     "time": "Time",
-    "durationLabel": "Duration",
     "total": "Total",
     "next": "Next",
     "back": "Back",
@@ -145,52 +135,6 @@
       "guarantee": {
         "title": "Satisfaction Guaranteed",
         "description": "Not satisfied with your lesson? We will make it right with a free follow-up session. Your happiness is our success metric."
-      }
-    }
-  },
-  "testimonials": {
-    "badge": "Testimonials",
-    "title": "What Our ",
-    "titleHighlight": "Clients Say",
-    "subtitle": "Do not just take our word for it. Hear from skiers who have transformed their skills with our instructors.",
-    "stats": {
-      "rating": "Average Rating",
-      "reviews": "Reviews",
-      "recommend": "Would Recommend"
-    }
-  },
-  "faq": {
-    "badge": "FAQ",
-    "title": "Frequently Asked ",
-    "titleHighlight": "Questions",
-    "subtitle": "Got questions? We have got answers. If you can not find what you are looking for, feel free to contact us.",
-    "stillHaveQuestions": "Still have questions?",
-    "contactText": "Our team is here to help. Reach out and we will get back to you within 24 hours.",
-    "contactUs": "Contact Us",
-    "items": {
-      "bring": {
-        "question": "What should I bring to my ski lesson?",
-        "answer": "Please bring your ski equipment (skis, boots, poles), valid ski pass, warm clothing, gloves, goggles, and sunscreen. If you need equipment rental, we can recommend trusted rental shops in Bakuriani."
-      },
-      "duration": {
-        "question": "How long are the lessons?",
-        "answer": "All our standard lessons are 2 hours long. This is the optimal duration for effective learning while maintaining energy and focus throughout the session."
-      },
-      "kids": {
-        "question": "Can I book a lesson for my child?",
-        "answer": "Absolutely! We have instructors specialized in teaching children. Kids lessons are available for ages 4 and up. We focus on safety, fun, and building confidence on the slopes."
-      },
-      "cancel": {
-        "question": "What if I need to cancel or reschedule?",
-        "answer": "We understand plans can change. You can reschedule or cancel your booking up to 24 hours before the lesson for a full refund. Cancellations within 24 hours are subject to a 50% fee."
-      },
-      "group": {
-        "question": "Do you offer group discounts?",
-        "answer": "Yes! Group lessons are a great way to learn with friends or family. We offer discounts for groups of 3 or more. Contact us for custom group packages."
-      },
-      "languages": {
-        "question": "What languages do the instructors speak?",
-        "answer": "Our instructors speak multiple languages including English, Georgian, Russian, German, French, and Spanish. You can filter instructors by language when booking."
       }
     }
   },

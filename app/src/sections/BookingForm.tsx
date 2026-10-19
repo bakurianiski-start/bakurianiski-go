@@ -49,9 +49,6 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
     beginner: t('instructors.lessonTypes.beginner'),
     intermediate: t('instructors.lessonTypes.intermediate'),
     advanced: t('instructors.lessonTypes.advanced'),
-    kids: t('instructors.lessonTypes.kids'),
-    group: t('instructors.lessonTypes.group'),
-    private: t('instructors.lessonTypes.private'),
   };
 
   const validateStep = (currentStep: Step): boolean => {
@@ -155,7 +152,7 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
   };
 
   const getLessonPrice = () => {
-    return instructor.pricePerHour * 2;
+    return instructor.pricePerSession;
   };
 
   const renderStepIndicator = () => {
@@ -226,8 +223,7 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
                 {lessonTypeLabels[type]}
               </div>
               <div className="text-sm text-slate-500 mt-1">
-                {formatPrice(instructor.pricePerHour * 2)}
-                <span className="text-xs"> / {t('booking.duration')}</span>
+                {formatPrice(instructor.pricePerSession)}
               </div>
             </button>
           ))}
@@ -350,12 +346,14 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
         <Input
           id="phone"
           type="tel"
+          inputMode="tel"
+          autoComplete="tel"
           value={booking.phone}
           onChange={(e) => {
             setBooking({ ...booking, phone: e.target.value });
             setErrors({ ...errors, phone: '' });
           }}
-          placeholder="+1 234 567 890"
+          placeholder="+995 555 123 456"
           className={errors.phone ? 'border-red-500' : ''}
         />
         {errors.phone && <p className="text-sm text-red-500 mt-1">{errors.phone}</p>}
@@ -413,10 +411,6 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
             <span className="text-slate-500">{t('booking.time')}:</span>
             <span className="font-medium">{booking.time}</span>
           </div>
-          <div className="flex justify-between">
-            <span className="text-slate-500">{t('booking.durationLabel')}:</span>
-            <span className="font-medium">{t('booking.duration')}</span>
-          </div>
           <div className="flex justify-between pt-2 border-t border-slate-200">
             <span className="text-slate-900 font-medium">{t('booking.total')}:</span>
             <span className="text-sky-600 font-bold">{formatPrice(getLessonPrice())}</span>
@@ -464,10 +458,6 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
             <span className="font-medium">
               {booking.date && formatDate(booking.date)} {t('booking.time').toLowerCase()} {booking.time}
             </span>
-          </div>
-          <div className="flex justify-between">
-            <span className="text-slate-500">{t('booking.durationLabel')}:</span>
-            <span className="font-medium">{t('booking.duration')}</span>
           </div>
         </div>
       </div>
