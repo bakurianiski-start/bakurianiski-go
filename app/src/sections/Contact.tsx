@@ -13,6 +13,7 @@ export function Contact() {
   const { t } = useTranslation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,9 +48,28 @@ export function Contact() {
     e.preventDefault();
     if (!validateForm()) return;
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setSubmitError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      const result: { ok?: boolean; error?: string } = await response.json();
+      if (!response.ok || result.ok !== true) {
+        throw new Error(result.error || `Contact request failed (${response.status})`);
+      }
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Contact form submission failed:', error);
+      setSubmitError(t('contact.form.error'));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -223,6 +243,12 @@ export function Contact() {
                     />
                     {errors.message && <p className="text-sm text-red-500 mt-1">{errors.message}</p>}
                   </div>
+
+                  {submitError && (
+                    <p role="alert" className="text-sm text-red-600">
+                      {submitError}
+                    </p>
+                  )}
 
                   <Button
                     type="submit"

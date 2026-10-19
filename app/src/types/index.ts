@@ -8,7 +8,6 @@ export interface Instructor {
   rating: number;
   reviewCount: number;
   bio: string;
-  certifications: string[];
   availability: AvailabilitySlot[];
 }
 

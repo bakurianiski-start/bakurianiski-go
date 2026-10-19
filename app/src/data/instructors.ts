@@ -11,7 +11,6 @@ export const instructors: Instructor[] = [
     rating: 4.9,
     reviewCount: 127,
     bio: 'Professional ski instructor in Bakuriani, helping skiers of all levels build skills and confidence on the slopes.',
-    certifications: ['ISIA Level 3', 'Avalanche Safety', 'First Aid Certified'],
     availability: [],
   },
 ];

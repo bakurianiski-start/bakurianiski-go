@@ -205,7 +205,7 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
         <Label className="text-base font-medium mb-3 block">
           {t('booking.selectLessonType')}
         </Label>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {instructor.lessonTypes.map((type) => (
             <button
               key={type}
@@ -213,13 +213,13 @@ export function BookingForm({ instructor, onClose }: BookingFormProps) {
                 setBooking({ ...booking, lessonType: type });
                 setErrors({ ...errors, lessonType: '' });
               }}
-              className={`p-4 rounded-xl border-2 text-left transition-all duration-200 ${
+              className={`min-w-0 rounded-xl border-2 p-4 text-left transition-all duration-200 ${
                 booking.lessonType === type
                   ? 'border-sky-500 bg-sky-50'
                   : 'border-slate-200 hover:border-sky-200 hover:bg-slate-50'
               }`}
             >
-              <div className="font-medium text-slate-900">
+              <div className="break-words text-sm font-medium text-slate-900 sm:text-base">
                 {lessonTypeLabels[type]}
               </div>
               <div className="text-sm text-slate-500 mt-1">

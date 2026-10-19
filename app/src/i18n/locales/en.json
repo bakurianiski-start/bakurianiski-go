@@ -112,13 +112,13 @@
     "subtitle": "We are not just another ski school. We are a community of passionate instructors dedicated to making your mountain experience unforgettable.",
     "cta": "Find Your Instructor",
     "features": {
-      "certified": {
-        "title": "Certified Instructors",
-        "description": "All our instructors are ISIA certified with years of experience teaching skiers of all levels. Learn from the best in Bakuriani."
+      "lessons": {
+        "title": "Ski Lessons for Every Level",
+        "description": "Get friendly, one-on-one guidance and build your confidence on the slopes at your own pace."
       },
       "safety": {
-        "title": "Safety First",
-        "description": "Your safety is our priority. All instructors are trained in first aid and avalanche safety. We provide comprehensive insurance coverage."
+        "title": "A Comfortable First Step",
+        "description": "We help you get familiar with the slopes and learn the basics at a pace that feels comfortable for you."
       },
       "flexible": {
         "title": "Flexible Scheduling",
@@ -154,6 +154,7 @@
       "messagePlaceholder": "Tell us more about your inquiry...",
       "send": "Send Message",
       "sending": "Sending...",
+      "error": "We could not send your message. Please try again later.",
       "success": {
         "title": "Message Sent!",
         "text": "Thank you for reaching out. We will get back to you within 24 hours."
@@ -166,7 +167,7 @@
     }
   },
   "footer": {
-    "description": "Georgia's premier ski instructor booking platform. Connecting you with certified professionals for an unforgettable mountain experience.",
+    "description": "Book a friendly ski instructor in Bakuriani and enjoy a memorable day on the slopes.",
     "company": "Company",
     "support": "Support",
     "legal": "Legal",

@@ -4,7 +4,7 @@ import { Shield, Award, Clock, Users, MapPin, HeartHandshake } from 'lucide-reac
 import { Badge } from '@/components/ui/badge';
 
 const features = [
-  { icon: Award, key: 'certified', bgColor: 'bg-amber-50' },
+  { icon: Award, key: 'lessons', bgColor: 'bg-amber-50' },
   { icon: Shield, key: 'safety', bgColor: 'bg-emerald-50' },
   { icon: Clock, key: 'flexible', bgColor: 'bg-sky-50' },
   { icon: Users, key: 'personalized', bgColor: 'bg-violet-50' },
